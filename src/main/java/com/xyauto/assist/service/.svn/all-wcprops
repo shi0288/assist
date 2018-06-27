@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/xyinteract/!svn/ver/2597/broker_assist/branches/develop/src/main/java/com/xyauto/assist/service
+END
+TaskService.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/xyinteract/!svn/ver/2597/broker_assist/branches/develop/src/main/java/com/xyauto/assist/service/TaskService.java
+END
+ExecutionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/xyinteract/!svn/ver/2583/broker_assist/branches/develop/src/main/java/com/xyauto/assist/service/ExecutionService.java
+END
+TaskExtService.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/xyinteract/!svn/ver/1849/broker_assist/branches/develop/src/main/java/com/xyauto/assist/service/TaskExtService.java
+END
+BrokerTaskFinishedService.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/xyinteract/!svn/ver/2332/broker_assist/branches/develop/src/main/java/com/xyauto/assist/service/BrokerTaskFinishedService.java
+END

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xyauto.assist.mapper.log.BrokerTaskFinishedMapper">
+
+
+    <select id="getDayProgressSum" resultType="DECIMAL">
+        SELECT sum(a.progress)
+        FROM
+        (
+        SELECT progress
+        FROM broker_task_day_finished
+        where
+        create_time <![CDATA[ >= ]]> #{startTime}
+        AND create_time <![CDATA[ <  ]]> #{endTime}
+        AND broker_id in
+        <foreach item="item" index="index" collection="ids" open="(" separator="," close=")">
+            ${item}
+        </foreach>
+        order by progress desc
+        limit ${limit}
+        ) as a
+    </select>
+
+
+    <select id="getDealerMonthProgress" resultType="DECIMAL">
+        select
+        case
+        when score>=3 then 1
+        when score=2 then 0.8
+        when score=1 then 0.5
+        else 0
+        end as score
+        from (
+        select
+        sum(case progress when 1 then 1 else 0 end) as score
+        from broker_task_day_finished
+        where dealer_id = ${dealerId}
+        and cal_time = #{calTime}
+        ) a
+    </select>
+
+
+    <select id="isWeek" resultType="int">
+        select count(1)  from dealer_task_month_finished
+        where
+        cal_time <![CDATA[ >= ]]> #{startTime}
+        AND cal_time <![CDATA[ <  ]]> #{endTime}
+        AND dealer_id = ${dealerId}
+        and (had_percent=1 or had_percent=3)
+    </select>
+
+    <select id="isMonth" resultType="int">
+        select count(1)  from dealer_task_month_finished
+         where
+        cal_time <![CDATA[ >= ]]> #{startTime}
+        AND cal_time <![CDATA[ <  ]]> #{endTime}
+        AND dealer_id = ${dealerId}
+        and (had_percent=2 or had_percent=3)
+    </select>
+
+</mapper>

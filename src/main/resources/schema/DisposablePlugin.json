@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "point": {
+      "type": "number"
+    },
+    "pre_day": {
+      "type": "number"
+    },
+    "appoint": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sign": {
+            "type": "string"
+          },
+          "point": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "sign",
+          "point"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

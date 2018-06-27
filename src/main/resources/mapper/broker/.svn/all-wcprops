@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/xyinteract/!svn/ver/2098/broker_assist/branches/develop/src/main/resources/mapper/broker
+END
+ExecutionMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/xyinteract/!svn/ver/2098/broker_assist/branches/develop/src/main/resources/mapper/broker/ExecutionMapper.xml
+END
+BrokerTaskExtMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/xyinteract/!svn/ver/1776/broker_assist/branches/develop/src/main/resources/mapper/broker/BrokerTaskExtMapper.xml
+END
+TaskMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/xyinteract/!svn/ver/1944/broker_assist/branches/develop/src/main/resources/mapper/broker/TaskMapper.xml
+END

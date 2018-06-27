@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/xyinteract/!svn/ver/2593/broker_assist/branches/develop/src/main/java/com/xyauto/assist/util/constant
+END
+CommonCons.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/xyinteract/!svn/ver/483/broker_assist/branches/develop/src/main/java/com/xyauto/assist/util/constant/CommonCons.java
+END
+JsonSchemaCons.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/xyinteract/!svn/ver/260/broker_assist/branches/develop/src/main/java/com/xyauto/assist/util/constant/JsonSchemaCons.java
+END
+ErrorCons.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/xyinteract/!svn/ver/2593/broker_assist/branches/develop/src/main/java/com/xyauto/assist/util/constant/ErrorCons.java
+END
+TaskPluginCons.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/xyinteract/!svn/ver/483/broker_assist/branches/develop/src/main/java/com/xyauto/assist/util/constant/TaskPluginCons.java
+END
+MqCons.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/xyinteract/!svn/ver/1117/broker_assist/branches/develop/src/main/java/com/xyauto/assist/util/constant/MqCons.java
+END

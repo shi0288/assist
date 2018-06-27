@@ -1,0 +1,84 @@
+{
+  "type": "object",
+  "properties": {
+    "limit_times": {
+      "type": "number"
+    },
+    "point": {
+      "type": "number"
+    },
+    "points": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "pre_day": {
+      "type": "number"
+    },
+    "appoint": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sign": {
+            "type": "string"
+          },
+          "point": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "sign",
+          "point"
+        ]
+      }
+    },
+    "appoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "start": {
+            "type": "number"
+          },
+          "end": {
+            "type": "number"
+          },
+          "point": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "start",
+          "point"
+        ]
+      }
+    },
+    "limit_appoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "start": {
+            "type": "number"
+          },
+          "end": {
+            "type": "number"
+          },
+          "point": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "start",
+          "point"
+        ]
+      }
+    }
+  },
+  "required": [
+    "limit_times"
+  ],
+  "additionalProperties": false
+}

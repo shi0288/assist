@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xyauto.assist.mapper.broker.TaskExtMapper">
+    <resultMap id="BaseResultMap" type="com.xyauto.assist.entity.TaskExt">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="task_id" jdbcType="BIGINT" property="taskId"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="sort" jdbcType="TINYINT" property="sort"/>
+        <result column="icon" jdbcType="VARCHAR" property="icon"/>
+        <result column="link" jdbcType="VARCHAR" property="link"/>
+        <result column="link_des" jdbcType="VARCHAR" property="linkDes"/>
+        <result column="extend" jdbcType="VARCHAR" property="extend"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="is_deleted" jdbcType="TINYINT" property="isDeleted"/>
+    </resultMap>
+
+    <resultMap id="ResultMapForTask" type="com.xyauto.assist.entity.TaskExt">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="task_id" jdbcType="BIGINT" property="taskId"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="sort" jdbcType="TINYINT" property="sort"/>
+        <result column="icon" jdbcType="VARCHAR" property="icon"/>
+        <result column="link" jdbcType="VARCHAR" property="link"/>
+        <result column="link_des" jdbcType="VARCHAR" property="linkDes"/>
+        <result column="extend" jdbcType="VARCHAR" property="extend"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="is_deleted" jdbcType="TINYINT" property="isDeleted"/>
+        <association property="task" javaType="com.xyauto.assist.entity.Task">
+            <result column="plugin" jdbcType="VARCHAR" property="plugin"/>
+            <result column="apply" jdbcType="VARCHAR" property="apply"/>
+            <result column="apply_condition" jdbcType="VARCHAR" property="applyCondition"/>
+            <result column="start_at" jdbcType="INTEGER" property="startAt"/>
+            <result column="end_at" jdbcType="INTEGER" property="endAt"/>
+        </association>
+    </resultMap>
+
+
+    <select id="all" resultMap="ResultMapForTask">
+    SELECT a.task_id,a.name,a.description,a.icon,a.link,a.link_des,a.extend,b.plugin,b.apply,b.apply_condition,b.start_at,b.end_at
+    FROM broker_task_ext a LEFT JOIN broker_task b
+    on a.task_id=b.id
+    WHERE b.status=1 and b.type=0
+    and a.is_deleted=0
+    ORDER by a.sort asc
+    </select>
+
+    <select id="allForPoint" resultMap="ResultMapForTask">
+        SELECT a.task_id,a.name,a.description,a.icon,a.link,a.link_des,a.extend,b.plugin,b.apply,b.apply_condition,b.start_at,b.end_at
+        FROM broker_task_ext a LEFT JOIN broker_task b
+        on a.task_id=b.id
+        WHERE b.status=1 and b.type=1
+        ORDER by a.sort asc
+    </select>
+
+
+</mapper>

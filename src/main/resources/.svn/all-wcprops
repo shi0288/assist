@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/xyinteract/!svn/ver/2331/broker_assist/branches/develop/src/main/resources
+END
+application.properties
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/xyinteract/!svn/ver/19/broker_assist/branches/develop/src/main/resources/application.properties
+END
+application-preprod.properties
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/xyinteract/!svn/ver/1023/broker_assist/branches/develop/src/main/resources/application-preprod.properties
+END
+logback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/xyinteract/!svn/ver/1365/broker_assist/branches/develop/src/main/resources/logback.xml
+END
+application-dev.properties
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/xyinteract/!svn/ver/1851/broker_assist/branches/develop/src/main/resources/application-dev.properties
+END
+application-prod.properties
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/xyinteract/!svn/ver/2098/broker_assist/branches/develop/src/main/resources/application-prod.properties
+END

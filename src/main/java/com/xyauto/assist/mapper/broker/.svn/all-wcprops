@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/xyinteract/!svn/ver/1944/broker_assist/branches/develop/src/main/java/com/xyauto/assist/mapper/broker
+END
+TaskExtMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/xyinteract/!svn/ver/495/broker_assist/branches/develop/src/main/java/com/xyauto/assist/mapper/broker/TaskExtMapper.java
+END
+BrokerMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/xyinteract/!svn/ver/1000/broker_assist/branches/develop/src/main/java/com/xyauto/assist/mapper/broker/BrokerMapper.java
+END
+ExecutionExtMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/xyinteract/!svn/ver/1407/broker_assist/branches/develop/src/main/java/com/xyauto/assist/mapper/broker/ExecutionExtMapper.java
+END
+ExecutionMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/xyinteract/!svn/ver/1407/broker_assist/branches/develop/src/main/java/com/xyauto/assist/mapper/broker/ExecutionMapper.java
+END
+TaskMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/xyinteract/!svn/ver/1944/broker_assist/branches/develop/src/main/java/com/xyauto/assist/mapper/broker/TaskMapper.java
+END

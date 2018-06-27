@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xyauto.assist.mapper.broker.ExecutionMapper">
+    <resultMap id="BaseResultMap" type="com.xyauto.assist.entity.Execution">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="uid" jdbcType="VARCHAR" property="uid"/>
+        <result column="target_id" jdbcType="VARCHAR" property="targetId"/>
+        <result column="task_id" jdbcType="BIGINT" property="taskId"/>
+        <result column="percent" jdbcType="DECIMAL" property="percent"/>
+        <result column="tag"  property="tag"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="is_deleted" jdbcType="TINYINT" property="isDeleted"/>
+    </resultMap>
+
+    <select id="queryCount" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM broker_task_execution
+        <where>
+            <if test="startTime">
+                AND create_time <![CDATA[ >= ]]> #{startTime}
+            </if>
+            <if test="endTime">
+                AND create_time <![CDATA[ <  ]]> #{endTime}
+            </if>
+            <if test="execution.uid">
+                AND uid=#{execution.uid}
+            </if>
+            <if test="execution.targetId">
+                AND target_id=#{execution.targetId}
+            </if>
+            AND task_id=#{execution.taskId}
+        </where>
+    </select>
+
+
+    <select id="queryExtCount" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM broker_task_execution_ext
+        <where>
+            AND task_id=#{executionExt.taskId}
+            <if test="executionExt.uid">
+                AND uid=#{executionExt.uid}
+            </if>
+            <if test="startTime">
+                AND create_time <![CDATA[ >= ]]> #{startTime}
+            </if>
+            <if test="endTime">
+                AND create_time <![CDATA[ <  ]]> #{endTime}
+            </if>
+            <if test="executionExt.targetId">
+                AND target_id=#{executionExt.targetId}
+            </if>
+        </where>
+    </select>
+
+
+
+</mapper>
